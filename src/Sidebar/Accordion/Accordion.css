@@ -1,0 +1,55 @@
+.accordion {
+    height: fit-content;
+    width: 85%;
+    padding: 0 7.5%;
+    margin: 0%;
+}
+
+h3, ul{
+    padding: 0.2rem 0%;
+    margin: 0.2rem 0%;
+}
+
+.accordion__heading {
+    /* background-color: #d3d3d3; */
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1rem 1%;
+}
+
+.accordion__heading:hover {
+    /* background-color: #a3a2a2; */
+    /* color: aqua; */
+    cursor: pointer;
+}
+
+ .accordion__headingSVG {
+    border-radius: 50%;
+    background-color: #39c039;
+    transition: all 0.2s linear;
+    padding: 1%;
+}
+
+.accordion__headingSVG--open {
+    transform: rotate(180deg);
+    background-color: #ce2709;
+}
+    
+
+.accordion__body {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s linear, opacity 0.1s linear, background-color 0.3s linear, height 0.3s linear;
+    height: 0;
+}
+
+.accordion__body--active {
+    visibility: visible;
+    opacity: 1;
+    /* background-color: #a3a2a2; */
+    transition: visibility 0.3s linear, opacity 0.1s linear, background-color 0.3s linear , height 0.3s linear;
+    height: 8rem;
+    overflow: hidden;
+}
